@@ -1,0 +1,8 @@
+/*
+  If you prefer your CSS Sassy. Run npm install -s node-sass and change the extension and import of this file.
+  Or use Less or whatever form of styling brings you the most Joy. Bonus points for following a CSS methodology. (BEM, OOCSS, ETC)
+*/
+
+body {
+  margin: 1em;
+}
