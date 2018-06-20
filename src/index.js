@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // Importing the fetch polyfill allows cypress to intercept fetch api requests.
 import 'whatwg-fetch';
 // Change me if you prefer sass,scss, less. (Note you may need to update the build config)
-import './index.css';
+import './index.scss';
 import App from './components/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
