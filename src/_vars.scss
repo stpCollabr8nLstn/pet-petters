@@ -9,6 +9,17 @@ h2 {
   font-weight: 500;
 }
 
+a {
+  color: $brand-01;
+  text-decoration: none;
+  &:visited {
+    color: $brand-01;
+  }
+  &:hover {
+    font-weight: 500;
+  }
+}
+
 // Breakpoints
 @mixin media-small {
   @media (max-width: 599px) { @content; }
