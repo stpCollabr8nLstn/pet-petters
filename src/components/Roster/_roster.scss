@@ -1,22 +1,41 @@
 .ppp--roster {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  width: 100%;
+
+  @include media-mid {
+    width: 500px;
+  }
 }
 
 .ppp--roster__header {
   display: flex;
-  justify-content: space-around;
+  width: 500px;
+
+  h2 {
+    width: 250px;
+  }
 }
 
 .ppp--roster__row {
   display: flex;
-  justify-content: space-around;
+  width: 500px;
   height: 32px;
   align-items: center;
-  border-radius: 4px;
+  @include border-radius;
+  position: relative;
+  left: -16px;
+  padding-left: 16px;
+
   &:hover {
     background: $brand-01;
     color: $text-04;
+  }
+}
+
+.ppp--roster__data {
+  width: 250px;
+
+  @include media-mid {
+    width: 250px;
   }
 }

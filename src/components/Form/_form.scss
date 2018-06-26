@@ -5,11 +5,6 @@
   margin-bottom: 48px;
 }
 
-.ppp--form-field__register {
-  display: flex;
-  flex-direction: column;
-}
-
 .ppp--text-input {
   height: 32px;
   border: none;
@@ -24,13 +19,13 @@
 }
 
 .ppp--button {
-  height: 48px;
+  height: 36px;
   background: $brand-01;
   color: $text-04;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 4px 16px;
+  @include border-radius;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
 
   &:focus {
     outline: none;

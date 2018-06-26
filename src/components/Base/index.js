@@ -5,17 +5,18 @@ import Navbar from '../Navbar';
 import HomePage from '../HomePage';
 import Player from '../Player';
 import Roster from '../Roster';
+import Register from '../Register';
 
 export default class Base extends Component {
   render(){
     return(
       <div>
         <Navbar />
-        <main role="main">
+        <main className="ppp--main" role="main">
           <Switch>
             <Route path='/' exact component={HomePage}/>
-            <Route path='/login' render={props => <Login register={false} />} />
-            <Route path='/register' render={props => <Login register />} />
+            <Route path='/login' render={props => <Login  />} />
+            <Route path='/register' render={props => <Register />} />
             <Route path='/roster' component={Roster}/>
             <Route path='/player' component={Player}/>
           </Switch>

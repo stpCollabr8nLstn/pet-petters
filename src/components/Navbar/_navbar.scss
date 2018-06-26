@@ -26,10 +26,36 @@
   align-items: baseline;
 }
 
+.ppp--brand__link {
+  display: flex;
+  align-items: baseline;
+  color: $text-01;
+}
+
 .ppp--menu-item {
   display: none;
   @include media-mid {
-    display: block;
+    display: flex;
+    width: 64px;
+    justify-content: center;
+    border: 1px solid transparent;
+  }
+
+  &:hover {
+    &:before {
+      content: '';
+      position: absolute;
+      height: 4px;
+      width: inherit;
+      top: 76px;
+      background: $brand-01;
+    }
+  }
+
+  &:focus {
+    a {
+      border: 1px solid $brand-01;
+    }
   }
 }
 

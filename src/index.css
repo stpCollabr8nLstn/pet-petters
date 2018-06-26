@@ -9,10 +9,10 @@ h2 {
 a {
   color: #4120A9;
   text-decoration: none; }
-  a:visited {
+  a:visited:not(.ppp--brand__link) {
     color: #4120A9; }
-  a:hover {
-    font-weight: 500; }
+  a:focus {
+    outline: none; }
 
 body {
   color: #111317;
@@ -38,15 +38,15 @@ body {
     .ppp--footer {
       height: 72px; } }
 
+.ppp--main {
+  display: flex;
+  justify-content: center; }
+
 .ppp--form-field {
   display: flex;
   flex-direction: column;
   border: none;
   margin-bottom: 48px; }
-
-.ppp--form-field__register {
-  display: flex;
-  flex-direction: column; }
 
 .ppp--text-input {
   height: 32px;
@@ -59,13 +59,13 @@ body {
     border-bottom: 2px solid #4120A9; }
 
 .ppp--button {
-  height: 48px;
+  height: 36px;
   background: #4120A9;
   color: #F5F7F5;
-  padding: 8px 16px;
+  padding: 4px 16px;
   border-radius: 4px;
   border: none;
-  font-size: 16px; }
+  font-size: 14px; }
   .ppp--button:focus {
     outline: none; }
 
@@ -136,11 +136,28 @@ body {
   display: flex;
   align-items: baseline; }
 
+.ppp--brand__link {
+  display: flex;
+  align-items: baseline;
+  color: #111317; }
+
 .ppp--menu-item {
   display: none; }
   @media (min-width: 600px) {
     .ppp--menu-item {
-      display: block; } }
+      display: flex;
+      width: 64px;
+      justify-content: center;
+      border: 1px solid transparent; } }
+  .ppp--menu-item:hover:before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: inherit;
+    top: 76px;
+    background: #4120A9; }
+  .ppp--menu-item:focus a {
+    border: 1px solid #4120A9; }
 
 .ppp--logo {
   height: 48px;
@@ -158,20 +175,33 @@ body {
       flex-direction: row; } }
 
 .ppp--roster {
-  display: flex;
-  justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .ppp--roster {
+      width: 500px; } }
 
 .ppp--roster__header {
   display: flex;
-  justify-content: space-around; }
+  width: 500px; }
+  .ppp--roster__header h2 {
+    width: 250px; }
 
 .ppp--roster__row {
   display: flex;
-  justify-content: space-around;
+  width: 500px;
   height: 32px;
   align-items: center;
-  border-radius: 4px; }
+  border-radius: 4px;
+  position: relative;
+  left: -16px;
+  padding-left: 16px; }
   .ppp--roster__row:hover {
     background: #4120A9;
     color: #F5F7F5; }
+
+.ppp--roster__data {
+  width: 250px; }
+  @media (min-width: 600px) {
+    .ppp--roster__data {
+      width: 250px; } }

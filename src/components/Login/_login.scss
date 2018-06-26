@@ -17,7 +17,7 @@
     height: 4px;
     background: $brand-01;
     display: block;
-    border-radius: 4px;
+    @include border-radius;
   }
   span {
     top: 52px;
