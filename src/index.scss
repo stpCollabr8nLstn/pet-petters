@@ -3,6 +3,22 @@
   Or use Less or whatever form of styling brings you the most Joy. Bonus points for following a CSS methodology. (BEM, OOCSS, ETC)
 */
 
+
+// Font
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,500,600,700,800');
+
+// Color Palatte
+@import "./vars.scss";
+
 body {
-  margin: 1em;
+  color: $text-01;
+  font-size: 16px;
+  font-family: 'Encode Sans Condensed', sans-serif;
 }
+
+// Components
+@import "./components/App/app.scss";
+@import "./components/Base/base.scss";
+@import "./components/Form/form.scss";
+@import "./components/Home/home.scss";
+@import "./components/Login/login.scss";

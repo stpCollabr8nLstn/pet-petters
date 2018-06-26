@@ -1,0 +1,31 @@
+.ppp--form-field {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-bottom: 48px;
+}
+
+.ppp--text-input {
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid;
+  margin: 0 4px 32px 0;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $brand-01;
+  }
+}
+
+.ppp--button {
+  height: 32px;
+  background: $brand-01;
+  color: $text-04;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -2,5 +2,134 @@
   If you prefer your CSS Sassy. Run npm install -s node-sass and change the extension and import of this file.
   Or use Less or whatever form of styling brings you the most Joy. Bonus points for following a CSS methodology. (BEM, OOCSS, ETC)
 */
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,500,600,700,800");
+h2 {
+  font-weight: 500; }
+
 body {
+  color: #111317;
+  font-size: 16px;
+  font-family: 'Encode Sans Condensed', sans-serif; }
+
+.ppp--main {
   margin: 1em; }
+
+.ppp--header {
+  font-size: 24px;
+  text-align: center; }
+  @media (min-width: 600px) {
+    .ppp--header {
+      font-size: 32px; } }
+
+.ppp--navbar ol {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 0;
+  padding-left: 0;
+  align-items: baseline; }
+
+.ppp--navbar img {
+  align-items: center; }
+
+.ppp--brand {
+  display: flex;
+  align-items: baseline; }
+
+.ppp--menu-item {
+  display: none; }
+  @media (min-width: 600px) {
+    .ppp--menu-item {
+      display: block; } }
+
+.ppp--logo {
+  height: 48px;
+  margin-right: 8px;
+  position: relative;
+  bottom: -10px; }
+
+.ppp--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4120A9;
+  color: #F5F7F5;
+  height: 48px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  margin: -8;
+  bottom: 0; }
+  @media (min-width: 600px) {
+    .ppp--footer {
+      height: 72px; } }
+
+.ppp--form-field {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-bottom: 48px; }
+
+.ppp--text-input {
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid;
+  margin: 0 4px 32px 0; }
+  .ppp--text-input:focus {
+    outline: none;
+    border-bottom: 2px solid #4120A9; }
+
+.ppp--button {
+  height: 32px;
+  background: #4120A9;
+  color: #F5F7F5;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none; }
+  .ppp--button:focus {
+    outline: none; }
+
+.ppp--login {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 48px;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .ppp--login {
+      flex-direction: row; } }
+
+.ppp--about {
+  padding-right: 48px;
+  line-height: 1.5; }
+  @media (min-width: 600px) {
+    .ppp--about {
+      padding: 0 48px;
+      max-width: 50%; } }
+
+.ppp--about__img {
+  width: 100%;
+  max-height: 350px;
+  border-radius: 4px; }
+
+.ppp--menu__mobile span, .ppp--menu__mobile span:before, .ppp--menu__mobile span:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  background: #4120A9;
+  display: block;
+  border-radius: 4px; }
+
+.ppp--menu__mobile span {
+  top: 52px;
+  right: 0; }
+
+.ppp--menu__mobile span:before {
+  top: -8px; }
+
+.ppp--menu__mobile span:after {
+  top: 8px; }
+
+@media (min-width: 600px) {
+  .ppp--menu__mobile {
+    display: none; } }

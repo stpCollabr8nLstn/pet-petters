@@ -1,0 +1,60 @@
+.ppp--header {
+  font-size: 24px;
+  text-align: center;
+  @include media-mid {
+    font-size: 32px;
+  }
+}
+
+.ppp--navbar {
+  ol {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 0;
+    padding-left: 0;
+    align-items: baseline;
+  }
+
+  img {
+    align-items: center;
+  }
+}
+
+.ppp--brand {
+  display: flex;
+  align-items: baseline;
+}
+
+.ppp--menu-item {
+  display: none;
+  @include media-mid {
+    display: block;
+  }
+}
+
+.ppp--logo {
+  height: 48px;
+  margin-right: 8px;
+  position: relative;
+  bottom: -10px;
+}
+
+.ppp--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $brand-01;
+  color: $text-04;
+  height: 48px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  margin: -8;
+  bottom: 0;
+
+  @include media-mid {
+    height: 72px;
+  }
+
+}

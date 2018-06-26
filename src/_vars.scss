@@ -1,0 +1,23 @@
+// Colors
+$text-01 : #111317;
+$text-02 : #6C6A61;
+$text-03 : #C1C7C6;
+$text-04 : #F5F7F5;
+$brand-01: #4120A9;
+
+h2 {
+  font-weight: 500;
+}
+
+// Breakpoints
+@mixin media-small {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin media-mid {
+  @media (min-width: 600px) { @content; }
+}
+
+@mixin media-lg {
+  @media (min-width: 900px) { @content; }
+}
