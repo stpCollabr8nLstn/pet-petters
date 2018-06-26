@@ -1,0 +1,22 @@
+.ppp--roster {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ppp--roster__header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ppp--roster__row {
+  display: flex;
+  justify-content: space-around;
+  height: 32px;
+  align-items: center;
+  border-radius: 4px;
+  &:hover {
+    background: $brand-01;
+    color: $text-04;
+  }
+}

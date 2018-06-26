@@ -18,8 +18,10 @@ body {
 
 // Components
 @import "./components/App/app.scss";
-@import "./components/Navbar/navbar.scss";
 @import "./components/Base/base.scss";
 @import "./components/Form/form.scss";
 @import "./components/HomePage/home-page.scss";
 @import "./components/Login/login.scss";
+@import "./components/Navbar/navbar.scss";
+@import "./components/Player/player.scss";
+@import "./components/Roster/roster.scss";
