@@ -12,7 +12,13 @@ export default class Base extends Component {
       <div>
         <Navbar />
         <main role="main">
-          <Player />
+          <Switch>
+            <Route path='/' exact component={HomePage}/>
+            <Route path='/login' render={props => <Login register={false} />} />
+            <Route path='/register' render={props => <Login register />} />
+            <Route path='/roster' component={Roster}/>
+            <Route path='/player' component={Player}/>
+          </Switch>
         </main>
         <footer className="ppp--footer" role="contentinfo">
           Professional Pet Petters Ⓒ 2018

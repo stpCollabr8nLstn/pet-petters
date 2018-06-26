@@ -7,7 +7,7 @@ export default class Login extends Component {
     return (
       <div className="ppp--login">
         <HomePage />
-        <Form register />
+        <Form register={this.props.register} />
       </div>
     )
   }
