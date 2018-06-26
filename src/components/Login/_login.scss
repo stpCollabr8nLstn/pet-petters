@@ -1,38 +1,10 @@
 .ppp--login {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   margin: 32px 48px;
   width: 100%;
 
   @include media-mid {
     flex-direction: row;
   };
-}
-
-.ppp--menu__mobile {
-  span, span:before, span:after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 4px;
-    background: $brand-01;
-    display: block;
-    @include border-radius;
-  }
-  span {
-    top: 52px;
-    right: 0;
-  }
-
-  span:before {
-    top: -8px;
-  }
-
-  span:after {
-    top: 8px;
-  }
-
-  @include media-mid {
-    display: none;
-  }
 }

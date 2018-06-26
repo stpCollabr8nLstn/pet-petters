@@ -3,6 +3,9 @@
   flex-direction: column;
   border: none;
   margin-bottom: 48px;
+  @include media-mid {
+    width: 50%;
+  }
 }
 
 .ppp--text-input {

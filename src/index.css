@@ -47,6 +47,9 @@ body {
   flex-direction: column;
   border: none;
   margin-bottom: 48px; }
+  @media (min-width: 600px) {
+    .ppp--form-field {
+      width: 50%; } }
 
 .ppp--text-input {
   height: 32px;
@@ -84,39 +87,15 @@ body {
 
 .ppp--login {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   margin: 32px 48px;
   width: 100%; }
   @media (min-width: 600px) {
     .ppp--login {
       flex-direction: row; } }
 
-.ppp--menu__mobile span, .ppp--menu__mobile span:before, .ppp--menu__mobile span:after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 4px;
-  background: #4120A9;
-  display: block;
-  border-radius: 4px; }
-
-.ppp--menu__mobile span {
-  top: 52px;
-  right: 0; }
-
-.ppp--menu__mobile span:before {
-  top: -8px; }
-
-.ppp--menu__mobile span:after {
-  top: 8px; }
-
-@media (min-width: 600px) {
-  .ppp--menu__mobile {
-    display: none; } }
-
 .ppp--header {
-  font-size: 24px;
-  text-align: center; }
+  font-size: 24px; }
   @media (min-width: 600px) {
     .ppp--header {
       font-size: 32px; } }
@@ -124,17 +103,20 @@ body {
 .ppp--navbar ol {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
   margin-left: 0;
   padding-left: 0;
   align-items: baseline; }
+  @media (min-width: 600px) {
+    .ppp--navbar ol {
+      justify-content: space-evenly; } }
 
 .ppp--navbar img {
   align-items: center; }
 
 .ppp--brand {
   display: flex;
-  align-items: baseline; }
+  align-items: baseline;
+  margin-left: 16px; }
 
 .ppp--brand__link {
   display: flex;
@@ -160,14 +142,56 @@ body {
     border: 1px solid #4120A9; }
 
 .ppp--logo {
-  height: 48px;
+  height: 32px;
   margin-right: 8px;
   position: relative;
   bottom: -10px; }
+  @media (min-width: 600px) {
+    .ppp--logo {
+      height: 48px; } }
+
+.ppp--menu__mobile span, .ppp--menu__mobile span:before, .ppp--menu__mobile span:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #4120A9;
+  display: block;
+  border-radius: 4px; }
+
+.ppp--menu__mobile span {
+  top: 36px;
+  right: 16; }
+
+.ppp--menu__mobile span:before {
+  top: -8px; }
+
+.ppp--menu__mobile span:after {
+  top: 8px; }
+
+@media (min-width: 600px) {
+  .ppp--menu__mobile {
+    display: none; } }
+
+.ppp--menu__mobile-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: #F5F7F5;
+  width: 150px;
+  height: 100vh;
+  box-shadow: -3px 0 16px #C1C7C6; }
+
+.ppp--menu-item__mobile {
+  padding: 16px;
+  width: 100%; }
 
 .ppp--player {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   margin: 32px 48px;
   width: 100%; }
   @media (min-width: 600px) {

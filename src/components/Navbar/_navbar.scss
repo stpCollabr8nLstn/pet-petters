@@ -1,6 +1,6 @@
 .ppp--header {
   font-size: 24px;
-  text-align: center;
+
   @include media-mid {
     font-size: 32px;
   }
@@ -10,10 +10,12 @@
   ol {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
     margin-left: 0;
     padding-left: 0;
     align-items: baseline;
+    @include media-mid {
+      justify-content: space-evenly;
+    }
   }
 
   img {
@@ -24,6 +26,7 @@
 .ppp--brand {
   display: flex;
   align-items: baseline;
+  margin-left: 16px;
 }
 
 .ppp--brand__link {
@@ -60,8 +63,59 @@
 }
 
 .ppp--logo {
-  height: 48px;
+  height: 32px;
   margin-right: 8px;
   position: relative;
   bottom: -10px;
+
+  @include media-mid {
+    height: 48px;
+  }
+}
+
+.ppp--menu__mobile {
+  span, span:before, span:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: $brand-01;
+    display: block;
+    @include border-radius;
+  }
+  span {
+
+    top: 36px;
+    right: 16;
+  }
+
+  span:before {
+    top: -8px;
+  }
+
+  span:after {
+    top: 8px;
+  }
+
+  @include media-mid {
+    display: none;
+  }
+}
+
+.ppp--menu__mobile-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: $text-04;
+  width: 150px;
+  height: 100vh;
+  box-shadow: -3px 0 16px $text-03;
+}
+
+.ppp--menu-item__mobile {
+  padding: 16px;
+  width: 100%;
 }
