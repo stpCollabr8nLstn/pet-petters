@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Login from '../Login';
 import Navbar from '../Navbar';
+import HomePage from '../HomePage';
 
 export default class Base extends Component {
   render(){
@@ -8,7 +10,7 @@ export default class Base extends Component {
       <div>
         <Navbar />
         <main role="main">
-            <Login />
+          <Login />
         </main>
         <footer className="ppp--footer" role="contentinfo">
           Professional Pet Petters Ⓒ 2018

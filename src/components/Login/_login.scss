@@ -9,22 +9,6 @@
   };
 }
 
-.ppp--about {
-  padding-right: 48px;
-  line-height: 1.5;
-
-  @include media-mid {
-    padding: 0 48px;
-    max-width: 50%;
-  }
-}
-
-.ppp--about__img {
-  width: 100%;
-  max-height: 350px;
-  border-radius: 4px;
-}
-
 .ppp--menu__mobile {
   span, span:before, span:after {
     content: '';

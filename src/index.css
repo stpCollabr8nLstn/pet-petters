@@ -103,15 +103,6 @@ body {
   .ppp--button:focus {
     outline: none; }
 
-.ppp--login {
-  display: flex;
-  flex-direction: column;
-  margin: 32px 48px;
-  width: 100%; }
-  @media (min-width: 600px) {
-    .ppp--login {
-      flex-direction: row; } }
-
 .ppp--about {
   padding-right: 48px;
   line-height: 1.5; }
@@ -124,6 +115,15 @@ body {
   width: 100%;
   max-height: 350px;
   border-radius: 4px; }
+
+.ppp--login {
+  display: flex;
+  flex-direction: column;
+  margin: 32px 48px;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .ppp--login {
+      flex-direction: row; } }
 
 .ppp--menu__mobile span, .ppp--menu__mobile span:before, .ppp--menu__mobile span:after {
   content: '';

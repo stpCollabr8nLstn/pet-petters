@@ -7,8 +7,11 @@ const Form = (props) => (
 
     {props.register && (
       <div className="ppp--form-field__register">
-        <label htmlFor="username">Username</label>
-        <input className="ppp--text-input" name="username" type="text" placeholder="choose a username" required />
+        <label htmlFor="first_name">First Name</label>
+        <input className="ppp--text-input" name="first_name" type="text" placeholder="your first name" required />
+
+        <label htmlFor="last_name">Last Name</label>
+        <input className="ppp--text-input" name="last_name" type="text" placeholder="your last name" required />
       </div>
     )}
 
