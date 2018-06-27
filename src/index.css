@@ -71,6 +71,12 @@ body {
   font-size: 14px; }
   .ppp--button:focus {
     outline: none; }
+  .ppp--button:disabled {
+    cursor: not-allowed;
+    background: #6C6A61; }
+
+.ppp--error {
+  color: #D9211C; }
 
 .ppp--about {
   padding-right: 48px;
@@ -85,13 +91,15 @@ body {
   max-height: 350px;
   border-radius: 4px; }
 
-.ppp--login {
+.ppp--login,
+.ppp--register {
   display: flex;
   flex-direction: column-reverse;
   margin: 32px 48px;
   width: 100%; }
   @media (min-width: 600px) {
-    .ppp--login {
+    .ppp--login,
+    .ppp--register {
       flex-direction: row; } }
 
 .ppp--header {

@@ -33,4 +33,13 @@
   &:focus {
     outline: none;
   }
+
+  &:disabled {
+    cursor:not-allowed;
+    background: $text-02;
+  }
+}
+
+.ppp--error {
+  color: $error-01;
 }
