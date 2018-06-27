@@ -1,11 +1,11 @@
 import React from 'react';
-import Base from '../Base';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Base from '../Base';
 
 const App = () => (
   <Router>
     <Base />
   </Router>
-)
+);
 
-export default App
+export default App;
