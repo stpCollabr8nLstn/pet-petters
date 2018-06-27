@@ -8,7 +8,7 @@ export default class NewPlayer extends Component {
       first: '',
       last: '',
       rating: 0,
-      handedness: null,
+      handedness: 'right',
       jwt: localStorage.getItem('jwt'),
       toRoster: false,
       msg: null,
@@ -70,12 +70,14 @@ export default class NewPlayer extends Component {
       });
     }
   }
+
   validateRating(e) {
     const valid = /[0-9]/;
     if (e.target.value.match(valid)) {
       this.setState({
         rating: e.target.value,
         msg: null,
+        valid: true,
       });
     } else {
       this.setState({
@@ -86,19 +88,10 @@ export default class NewPlayer extends Component {
   }
 
   validateHandedness(e) {
-    const { value } = e.target;
-    if (value === 'right' || value === 'left') {
-      this.setState({
-        handedness: e.target.value,
-        msg: null,
-        valid: true,
-      });
-    } else {
-      this.setState({
-        valid: false,
-        msg: '⚠ Oops! Handness can only be right or left.',
-      });
-    }
+    this.setState({
+      handedness: e.target.value,
+      msg: null,
+    });
   }
 
   render() {
@@ -152,22 +145,24 @@ export default class NewPlayer extends Component {
 
         <label htmlFor="handedness">
           Handedness
-          <input
+          <select
             id="handedness"
             className="ppp--text-input"
-            onKeyUp={this.validateHandedness}
+            onChange={this.validateHandedness}
             type="text"
             name="handedness"
-            placeholder="right | left"
             required
-          />
+          >
+            <option value="right">Right</option>
+            <option value="left">Left</option>
+          </select>
         </label>
 
         {this.state.msg && <p className="ppp--error">{this.state.msg}</p>}
 
         <div className="ppp--button-row">
           <button
-            id="register"
+            id="create"
             className="ppp--button"
             disabled={!this.state.valid}
             onClick={this.addPlayer}

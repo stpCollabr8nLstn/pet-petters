@@ -55,7 +55,7 @@ export default class NavBar extends Component {
                 <Link to="/roster">Roster</Link>
               </li>
               <li className="ppp--menu-item">
-                <Link to="/players/new">Add Players</Link>
+                <Link to="/player/new">Add Players</Link>
               </li>
               <li className="ppp--menu-item">
                 <Link to="/" onClick={this.logout}>Log Out</Link>

@@ -29,8 +29,7 @@ export default class Roster extends Component {
       });
   }
 
-  deletePlayer(e) {
-    const { id } = e.target;
+  deletePlayer(id) {
     const url = `https://players-api.developer.alchemy.codes/api/players/${id}`;
     fetch(url, {
       method: 'delete',
@@ -64,11 +63,11 @@ export default class Roster extends Component {
             <div className="ppp--roster__data">{player.handedness}</div>
             <div className="ppp--roster__data">
               <button
-                id="delete"
-                className="ppp--delete"
-                onClick={this.deletePlayer}
+                id={player.id}
+                className="ppp--delete delete"
+                onClick={() => this.deletePlayer(player.id)}
               >
-                <svg id={player.id} className="ppp--delete__icon">
+                <svg className="ppp--delete__icon">
                   <path d="M1 11L11 1M1 1l10 10" />
                 </svg>
               </button>

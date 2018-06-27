@@ -16,7 +16,7 @@ const Base = () => (
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/roster" component={Roster} />
-        <Route path="/players/new" exact component={NewPlayer} />
+        <Route path="/player/new" exact component={NewPlayer} />
       </Switch>
     </main>
     <footer className="ppp--footer" role="contentinfo">
