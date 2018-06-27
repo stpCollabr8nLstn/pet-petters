@@ -3,6 +3,7 @@
   flex-direction: column;
   border: none;
   margin-bottom: 48px;
+
   @include media-mid {
     width: 50%;
   }
@@ -26,7 +27,9 @@
   background: $brand-01;
   color: $text-04;
   padding: 4px 16px;
+
   @include border-radius;
+
   border: none;
   font-size: 14px;
 
@@ -35,7 +38,7 @@
   }
 
   &:disabled {
-    cursor:not-allowed;
+    cursor: not-allowed;
     background: $text-02;
   }
 }

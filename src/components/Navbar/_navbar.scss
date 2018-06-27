@@ -7,12 +7,14 @@
 }
 
 .ppp--navbar {
+
   ol {
     list-style: none;
     display: flex;
     margin-left: 0;
     padding-left: 0;
     align-items: baseline;
+
     @include media-mid {
       justify-content: space-evenly;
     }
@@ -37,6 +39,7 @@
 
 .ppp--menu-item {
   display: none;
+
   @include media-mid {
     display: flex;
     width: 64px;
@@ -45,6 +48,7 @@
   }
 
   &:hover {
+
     &:before {
       content: '';
       position: absolute;
@@ -56,6 +60,7 @@
   }
 
   &:focus {
+
     a {
       border: 1px solid $brand-01;
     }
@@ -74,17 +79,21 @@
 }
 
 .ppp--menu__mobile {
-  span, span:before, span:after {
+
+  span,
+  span:before,
+  span:after {
     content: '';
     position: absolute;
     width: 20px;
     height: 3px;
     background: $brand-01;
     display: block;
+
     @include border-radius;
   }
-  span {
 
+  span {
     top: 36px;
     right: 16;
   }

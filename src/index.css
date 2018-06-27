@@ -158,7 +158,9 @@ body {
     .ppp--logo {
       height: 48px; } }
 
-.ppp--menu__mobile span, .ppp--menu__mobile span:before, .ppp--menu__mobile span:after {
+.ppp--menu__mobile span,
+.ppp--menu__mobile span:before,
+.ppp--menu__mobile span:after {
   content: '';
   position: absolute;
   width: 20px;
@@ -224,10 +226,10 @@ body {
   width: 500px;
   height: 32px;
   align-items: center;
-  border-radius: 4px;
   position: relative;
   left: -16px;
-  padding-left: 16px; }
+  padding-left: 16px;
+  border-radius: 4px; }
   .ppp--roster__row:hover {
     background: #4120A9;
     color: #F5F7F5; }

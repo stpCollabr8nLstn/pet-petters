@@ -21,10 +21,11 @@
   width: 500px;
   height: 32px;
   align-items: center;
-  @include border-radius;
   position: relative;
   left: -16px;
   padding-left: 16px;
+
+  @include border-radius;
 
   &:hover {
     background: $brand-01;
