@@ -1,42 +1,88 @@
 .ppp--roster {
-  flex-direction: column;
-  width: 100%;
+  overflow: auto;
 
   @include media-mid {
-    width: 500px;
+    overflow: hidden;
+    margin-left: 32px;
   }
 }
 
-.ppp--roster__header {
-  display: flex;
-  width: 500px;
+.ppp--roster__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  grid-auto-rows: minmax(auto, 48px);
 
-  h2 {
-    width: 250px;
+  @include media-mid {
+    grid-auto-rows: minmax(auto, 32px);
   }
 }
 
-.ppp--roster__row {
-  display: flex;
-  width: 500px;
-  height: 32px;
-  align-items: center;
-  position: relative;
-  left: -16px;
-  padding-left: 16px;
+.ppp--roster__grid-heading {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  grid-auto-rows: minmax(auto, auto);
 
-  @include border-radius;
-
-  &:hover {
-    background: $brand-01;
-    color: $text-04;
+  @include media-mid {
+    grid-auto-rows: minmax(auto, 64px);
   }
 }
 
 .ppp--roster__data {
-  width: 250px;
+  width: 51px;
 
   @include media-mid {
-    width: 250px;
+    width: 172px;
   }
+}
+
+.ppp--loading {
+  position: relative;
+  left: 186px;
+  transform: rotate(-115deg);
+}
+
+.spinner {
+  fill: transparent;
+  stroke: $brand-01;
+  stroke-width: 16;
+  stroke-dasharray: 535px;
+  animation: spinner 5s linear infinite;
+}
+
+@keyframes spinner {
+
+  from { stroke-dashoffset: 1605; }
+}
+
+.ppp--delete__icon {
+  margin-left: -4px;
+  margin-top: 2px;
+
+  path {
+    stroke: $brand-01;
+    stroke-width: 2;
+  }
+}
+
+.ppp--delete {
+  height: 18px;
+  width: 18px;
+  border: none;
+
+  &:hover {
+    background: $brand-01;
+
+    path {
+      stroke: $text-04;
+      stroke-width: 2;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include border-radius;
 }

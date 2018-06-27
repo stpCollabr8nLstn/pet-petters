@@ -46,3 +46,12 @@
 .ppp--error {
   color: $error-01;
 }
+
+.ppp--button__secondary {
+  margin-left: 32px;
+}
+
+.ppp--button-row {
+  display: flex;
+  align-items: center;
+}

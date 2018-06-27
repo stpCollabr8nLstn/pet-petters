@@ -39,26 +39,28 @@ export default class NavBar extends Component {
               <header className="ppp--header">Professional Pet Petters</header>
             </Link>
           </li>
-          <li className="ppp--menu-item">
-            <Link to="/roster">Roster</Link>
-          </li>
-          <li className="ppp--menu-item">
-            <Link to="/player">Players</Link>
-          </li>
           {!loggedIn && (
-            <li className="ppp--menu-item">
-              <Link to="/login">Login</Link>
-            </li>
-          )}
-          {!loggedIn && (
-            <li className="ppp--menu-item">
-              <Link to="/register">Register</Link>
-            </li>
+            <div className="ppp--menu__items">
+              <li className="ppp--menu-item">
+                <Link to="/login">Login</Link>
+              </li>
+              <li className="ppp--menu-item">
+                <Link to="/register">Register</Link>
+              </li>
+            </div>
           )}
           {loggedIn && (
-            <li className="ppp--menu-item">
-              <Link to="/" onClick={this.logout}>Log Out</Link>
-            </li>
+            <div className="ppp--menu__items">
+              <li className="ppp--menu-item">
+                <Link to="/roster">Roster</Link>
+              </li>
+              <li className="ppp--menu-item">
+                <Link to="/players/new">Add Players</Link>
+              </li>
+              <li className="ppp--menu-item">
+                <Link to="/" onClick={this.logout}>Log Out</Link>
+              </li>
+            </div>
           )}
 
           {/* Mobile Menu */}

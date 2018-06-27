@@ -78,6 +78,13 @@ body {
 .ppp--error {
   color: #D9211C; }
 
+.ppp--button__secondary {
+  margin-left: 32px; }
+
+.ppp--button-row {
+  display: flex;
+  align-items: center; }
+
 .ppp--about {
   padding-right: 48px;
   line-height: 1.5; }
@@ -136,7 +143,7 @@ body {
   @media (min-width: 600px) {
     .ppp--menu-item {
       display: flex;
-      width: 64px;
+      width: 86px;
       justify-content: center;
       border: 1px solid transparent; } }
   .ppp--menu-item:hover:before {
@@ -199,6 +206,9 @@ body {
   padding: 16px;
   width: 100%; }
 
+.ppp--menu__items {
+  display: flex; }
+
 .ppp--player {
   display: flex;
   flex-direction: column-reverse;
@@ -209,33 +219,68 @@ body {
       flex-direction: row; } }
 
 .ppp--roster {
-  flex-direction: column;
-  width: 100%; }
+  overflow: auto; }
   @media (min-width: 600px) {
     .ppp--roster {
-      width: 500px; } }
+      overflow: hidden;
+      margin-left: 32px; } }
 
-.ppp--roster__header {
-  display: flex;
-  width: 500px; }
-  .ppp--roster__header h2 {
-    width: 250px; }
+.ppp--roster__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  grid-auto-rows: minmax(auto, 48px); }
+  @media (min-width: 600px) {
+    .ppp--roster__grid {
+      grid-auto-rows: minmax(auto, 32px); } }
 
-.ppp--roster__row {
-  display: flex;
-  width: 500px;
-  height: 32px;
-  align-items: center;
-  position: relative;
-  left: -16px;
-  padding-left: 16px;
-  border-radius: 4px; }
-  .ppp--roster__row:hover {
-    background: #4120A9;
-    color: #F5F7F5; }
+.ppp--roster__grid-heading {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  grid-auto-rows: minmax(auto, auto); }
+  @media (min-width: 600px) {
+    .ppp--roster__grid-heading {
+      grid-auto-rows: minmax(auto, 64px); } }
 
 .ppp--roster__data {
-  width: 250px; }
+  width: 51px; }
   @media (min-width: 600px) {
     .ppp--roster__data {
-      width: 250px; } }
+      width: 172px; } }
+
+.ppp--loading {
+  position: relative;
+  left: 186px;
+  transform: rotate(-115deg); }
+
+.spinner {
+  fill: transparent;
+  stroke: #4120A9;
+  stroke-width: 16;
+  stroke-dasharray: 535px;
+  animation: spinner 5s linear infinite; }
+
+@keyframes spinner {
+  from {
+    stroke-dashoffset: 1605; } }
+
+.ppp--delete__icon {
+  margin-left: -4px;
+  margin-top: 2px; }
+  .ppp--delete__icon path {
+    stroke: #4120A9;
+    stroke-width: 2; }
+
+.ppp--delete {
+  height: 18px;
+  width: 18px;
+  border: none;
+  border-radius: 4px; }
+  .ppp--delete:hover {
+    background: #4120A9; }
+    .ppp--delete:hover path {
+      stroke: #F5F7F5;
+      stroke-width: 2; }
+  .ppp--delete:focus {
+    outline: none; }

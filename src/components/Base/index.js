@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import Login from '../Login';
 import Navbar from '../Navbar';
 import HomePage from '../HomePage';
-import Player from '../Player';
 import Roster from '../Roster';
+import NewPlayer from '../NewPlayer';
 import Register from '../Register';
 
 const Base = () => (
@@ -16,7 +16,7 @@ const Base = () => (
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/roster" component={Roster} />
-        <Route path="/player" component={Player} />
+        <Route path="/players/new" exact component={NewPlayer} />
       </Switch>
     </main>
     <footer className="ppp--footer" role="contentinfo">

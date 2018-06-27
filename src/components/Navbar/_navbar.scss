@@ -42,7 +42,7 @@
 
   @include media-mid {
     display: flex;
-    width: 64px;
+    width: 86px;
     justify-content: center;
     border: 1px solid transparent;
   }
@@ -127,4 +127,8 @@
 .ppp--menu-item__mobile {
   padding: 16px;
   width: 100%;
+}
+
+.ppp--menu__items {
+  display: flex;
 }
