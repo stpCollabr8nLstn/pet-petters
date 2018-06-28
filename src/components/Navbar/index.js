@@ -21,7 +21,10 @@ export default class NavBar extends Component {
 
   logout() {
     localStorage.removeItem('jwt');
-    this.setState({ loggedIn: false });
+    this.setState({
+      loggedIn: false,
+      open: false,
+     });
   }
 
   render() {
@@ -69,18 +72,29 @@ export default class NavBar extends Component {
           </li>
           {open && (
             <ol className="ppp--menu__mobile-open">
-              <li className="ppp--menu-item__mobile">
-                <Link to="/roster" onClick={this.toggleMenu}>Roster</Link>
-              </li>
-              <li className="ppp--menu-item__mobile">
-                <Link to="/player" onClick={this.toggleMenu}>Players</Link>
-              </li>
-              <li className="ppp--menu-item__mobile">
-                <Link to="/login" onClick={this.toggleMenu}>Log In</Link>
-              </li>
-              <li className="ppp--menu-item__mobile">
-                <Link to="/register" onClick={this.toggleMenu}>Register</Link>
-              </li>
+              {loggedIn && (
+                <div>
+                  <li className="ppp--menu-item__mobile">
+                    <Link to="/roster" onClick={this.toggleMenu}>Roster</Link>
+                  </li>
+                  <li className="ppp--menu-item__mobile">
+                    <Link to="/player/new" onClick={this.toggleMenu}>Add Player</Link>
+                  </li>
+                  <li className="ppp--menu-item__mobile">
+                    <Link to="/" onClick={this.logout}>Log Out</Link>
+                  </li>
+                </div>
+              )}
+              {!loggedIn && (
+                <div>
+                  <li className="ppp--menu-item__mobile">
+                    <Link to="/login" onClick={this.toggleMenu}>Log In</Link>
+                  </li>
+                  <li className="ppp--menu-item__mobile">
+                    <Link to="/register" onClick={this.toggleMenu}>Register</Link>
+                  </li>
+                </div>
+              )}
             </ol>
           )}
         </ol>
