@@ -24,7 +24,7 @@ export default class NavBar extends Component {
     this.setState({
       loggedIn: false,
       open: false,
-     });
+    });
   }
 
   render() {
